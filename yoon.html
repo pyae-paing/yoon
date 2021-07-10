@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p{border:2px solid black
+
+}
+</style>
+	<title>anni</title>
+
+</head>
+<body style="background-color:pink;">
+	<h1 align="center">My Queen</h1>
+	<p style="font-family:courier;">I love doing life with you....</p>
+	<img src="n01.jpg" alt="yoon photo" width="400" height="400"><br>
+	<p>Seeing you smile is the best part of my day</p>
+<script >
+	<div>function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 * 5,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+};
+
+const diffDays = (date, otherDate) => Math.ceil(Math.abs(date - otherDate) / (1000 * 60 * 60 * 24));
+
+// Example
+diffDays(new Date('2014-12-19'), new Date('2020-01-01'));   // 1839
+</script>
+<div>
+	<div>Registration closes in <span id="time">05:00</span> minutes!</div>
+</div>
+</body>
+</html>
